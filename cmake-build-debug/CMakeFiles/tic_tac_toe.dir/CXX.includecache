@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/tic-tac-toe/main.cpp
+tictactoe.h
+D:/tic-tac-toe/tictactoe.h
+
+D:/tic-tac-toe/tictactoe.cpp
+tictactoe.h
+D:/tic-tac-toe/tictactoe.h
+
+D:/tic-tac-toe/tictactoe.h
+iostream
+-
+vector
+-
+
