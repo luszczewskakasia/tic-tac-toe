@@ -1,4 +1,4 @@
-# Install script for directory: D:/tic-tac-toe
+# Install script for directory: D:/tic-tac-toe/tic-tac-toe
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/tic-tac-toe/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/tic-tac-toe/tic-tac-toe/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

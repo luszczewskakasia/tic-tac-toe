@@ -19,8 +19,8 @@ void TicTacToe::printBoard() {
 /// This code allows user to type in position of row and col to place 'x' or 'o'
 bool TicTacToe::makeMove (int row, int col) {
     //this allows user to choose values between <1,3>, not <0,2>
-    row = row - 1;
-    col = col -1;
+    row -= 1;
+    col -= 1;
     if (row < 0 || row >= 3 || col < 0 || col >= 3 || board[row][col] != ' ') {
         std::cout << "Wrong move! Try again!";
         return false;
@@ -32,11 +32,40 @@ bool TicTacToe::makeMove (int row, int col) {
     return true;
 
 }
-//
-//bool CheckWin () {
-//
-//}
-//
-//bool SwitchPlayer () {
-//
-//}
+
+bool TicTacToe::checkWin() {
+    for (int i = 0; i < 3; i++) {
+        if ((board[0][i] == player && board[1][i] == player && board[2][i] == player) ||
+            board[i][0] == player && board[i][1] == player && board[i][2] == player) {
+            std::cout << "You've won!" << std::endl;
+            return true;
+        }
+
+
+        if ((board[0][0] == player && board[1][1] == player && board[2][2] == player) ||
+            (board[0][2] == player && board[1][1] == player && board[2][0] == player)) {
+            std::cout << "You've won!" << std::endl;
+            return true;
+        }
+        return false;
+    }
+}
+
+bool TicTacToe::switchPlayer() {
+    if (player == 'X')
+        player = 'O';
+    else
+        player = 'X';
+
+    return player;
+}
+
+bool TicTacToe::isBoardFull() {
+    for (const auto& row : board) {
+        for (char square : row) {
+            if (square == ' ')
+                return false;
+        }
+    }
+    return true;
+}

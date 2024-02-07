@@ -12,5 +12,8 @@ public:
     TicTacToe();
     void printBoard();
     bool makeMove(int row, int col);
+    bool switchPlayer();
+    bool checkWin();
+    bool isBoardFull();
 };
 #endif //TIC_TAC_TOE_TICTACTOE_H
